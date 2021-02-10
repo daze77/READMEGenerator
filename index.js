@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require( 'fs' )
 const inquirer = require( 'inquirer' )
+const markdown = require('./utils/generateMarkdown')
 // TODO: Create an array of questions for user input
 
   async function questions () {
@@ -54,7 +55,7 @@ const inquirer = require( 'inquirer' )
     },
   ])
   console.log( `our reponse is `, response)
-  }
+}
 
 questions()
 
@@ -113,7 +114,7 @@ title of my project and sections entitled Description, Table of Contents, Instal
 // // TODO: Create a function to write README file
 
 
-fs.writeFileSync('README.md', markupContent, (err) =>
+fs.writeFileSync('README.md', markdown, (err) =>
 err ? console.log(err): console.log('Successfully created README.md'))
 
 // // TODO: Create a function to initialize app
