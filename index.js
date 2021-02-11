@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require( 'fs' )
 const inquirer = require( 'inquirer' )
-const markdown = require('./utils/generateMarkdown')
+// const markdown = require('./utils/generateMarkdown')
 // TODO: Create an array of questions for user input
 
   async function questions () {
@@ -55,11 +55,24 @@ const markdown = require('./utils/generateMarkdown')
     },
   ])
   console.log( `our reponse is `, response)
+
+
+const output = generateTest(response)
+
+
+fs.writeFileSync('README.md', output)
+console.log('Successfully created README.md')
+
+
+
 }
 
-questions()
-
-
+function generateTest(answers) {
+    return `
+    ${answers.title}
+    ${answers.descrption}
+    `
+}
 
 
 /*
@@ -109,16 +122,10 @@ title of my project and sections entitled Description, Table of Contents, Instal
 
 */
 
-// const questions = [];
-
-// // TODO: Create a function to write README file
-
-
-fs.writeFileSync('README.md', markdown, (err) =>
-err ? console.log(err): console.log('Successfully created README.md'))
-
 // // TODO: Create a function to initialize app
 // function init() {}
 
 // // Function call to initialize app
 // init();
+questions()
+
