@@ -1,6 +1,8 @@
 // TODO: Include packages needed for this application
 const fs = require( 'fs' )
 const inquirer = require( 'inquirer' )
+const generateMarkdown = require ('./utils/generateMarkdown')
+
 // const markdown = require('./utils/generateMarkdown')
 // TODO: Create an array of questions for user input
 
@@ -29,7 +31,7 @@ const inquirer = require( 'inquirer' )
     },
     {
         type: 'input',
-        name: 'contribution guidelines',
+        name: 'contributionguidelines',
         message: 'Please confirm contribution guidelines to be followed.',
     },
     {
@@ -41,7 +43,7 @@ const inquirer = require( 'inquirer' )
         type: 'list',
         name: 'license',
         message: 'Please select the applicble license applicable for this application.',
-        choices: ['y', 'o', 'p']
+        choices: ['MIT', 'GNU GPL v3', 'Apache', 'Boost', 'No License']
     },
     {
         type: 'input',
@@ -56,76 +58,16 @@ const inquirer = require( 'inquirer' )
   ])
   console.log( `our reponse is `, response)
 
+  const data = generateMarkdown(response)
 
-const output = generateTest(response)
+  
 
-
-fs.writeFileSync('README.md', output)
+fs.writeFileSync('README.md', data)
 console.log('Successfully created README.md')
 
-
-
-}
-
-function generateTest(answers) {
-    return `
-    ${answers.title}
-    ${answers.descrption}
-    `
 }
 
 
-/*
-ReadMe Questions to Ask:
-- Title
-- Description
-    - Why did we build this appliication?
-    - What problem is being solved by this application?
-    - What did you learn creating this application?
-    - What makes this application stand out?
-- TOC
-- Installation instructions if any
-- Usage - how to use the application
-- Licensing of the application 
-    - pick from predefined list
-    - this will then generate the badge that will appear on top of readme
-    - Licensing section will also appear in readme with details about the badge
-- Contributing - use OOTB covenant for this if the app is open to contributions
-- Tests Code
-- Questions
-    -what is your github user name? - this will add github to this section
-    -what is your email address? - this will add a contact information to this section
-    -
 
-
-
-
-
-- Badges to be used on the page
-- Features - for apps with many features
-
-
-
-TOC
-- Installation
-- Usage
-    - include screenshots here
-- Credits
-- Licensing
-- Badges
-- Features
-- Contributing
-- Tests
-title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-
-
-
-*/
-
-// // TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
 questions()
 
