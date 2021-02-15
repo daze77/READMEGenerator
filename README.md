@@ -49,5 +49,7 @@ Please find screenshots and a brief video showcasing the application below
 ![README Pic](Assets/images/READMEGenerated2.png)
 
 
-Link to video (../Assets/images/reademeGeneratorVid.mp4)
+Link to video - Note the video is too large to show in gitHub and must be downloaded to view!
+
+https://github.com/daze77/READMEGenerator/blob/master/Assets/images/readmeGeneratorVid.mp4
     
