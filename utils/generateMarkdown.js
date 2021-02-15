@@ -8,14 +8,7 @@ console.log("This is in the generateMd file")
 // const { makeBadge, ValidationError } = require('badge-maker')
 
     
-function badge(){
-
-
-
-
-
-}  
-    
+  
 
 // // TODO: Create a function that returns a license badge based on which license is passed in
 // // If there is no license, return an empty string
@@ -66,8 +59,8 @@ function generateMarkdown(data) {
     function licenseLInk(){
         if (badgeLink === ""){
             fullBadgeLink = ""
-        }else fullBadgeLink = `![Badges](https://img.shields.io/badge/License-${badgeCode}-${badgeColor})  
-        (${badgeLink})`
+        }else fullBadgeLink = `![Badges](https://img.shields.io/badge/License-${badgeCode}-${badgeColor})`  
+            licenseLink =  `${badgeLink}`
     }
     licenseLInk()
 
@@ -85,7 +78,8 @@ function generateMarkdown(data) {
 
     return `
 # ${data.title} 
-    
+  
+${fullBadgeLink}
 
 ## Table of Contents 
 - [Description](#description)
@@ -106,7 +100,7 @@ function generateMarkdown(data) {
     ${data.usage}
     
 ## Licensing
-${fullBadgeLink}      
+${licenseLink}      
 
     
 ## Contributing

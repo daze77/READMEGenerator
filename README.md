@@ -1,6 +1,7 @@
 
-# t 
-    
+# Readme Generator 
+  
+![Badges](https://img.shields.io/badge/License-GPLv3-blue)
 
 ## Table of Contents 
 - [Description](#description)
@@ -12,26 +13,25 @@
 - [Questions](#questions)
     
 ## Description
-    t
+    This application was created to quickly create readme files quickly and easily.
     
 ## Installation Instructions 
-    t
+    There are no special installation instructions.  Type node index.js to run the application.
 
 ## Usage
-    t
+    Use as needed to generate readme files quickly
     
 ## Licensing
-![Badges](https://img.shields.io/badge/License-Boost%201.0-lightblue)  
-        (https://www.boost.org/LICENSE_1_0.txt)      
+https://www.gnu.org/licenses/gpl-3.0      
 
     
 ## Contributing
-    t
+    anyone can add to this application as needed
     
 ## Tests Code
-    t
+    to test please type node index.js and answer all the questions to generate the readme file
     
 ## Questions
     
-You can find me here on [GitHub](http://github.com/daze77), or contact me via [email](mailto:bill.hronis@outlook.com)  
+You can find me here on [GitHub](http://github.com/daze77), or contact me via [email](mailto:daze77@gmail.com)  
     
